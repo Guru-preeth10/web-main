@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="cart.js" defer></script> <!-- Add the cart.js script -->
+    <style>
+        #cart-items {
+    margin-bottom: 20px;
+}
+
+.cart-item {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+#total-amount {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+#checkout {
+    background-color: #d4af37;
+    color: white;
+    padding: 1em;
+    border: none;
+    cursor: pointer;
+}
+
+#checkout:hover {
+    background-color: #b8860b;
+}
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f7f1e3;
+            color: #4b3832;
+        }
+
+        header {
+            background: linear-gradient(90deg, #d4af37, #b8860b);
+            padding: 1em;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 1.5em;
+            color: #fff;
+            font-weight: bold;
+            display: inline-block;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: inline-block;
+            float: right;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 1em;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+        }
+
+
+        footer {
+            text-align: center;
+            padding: 1em;
+            background-color: #4b3832;
+            color: #fff;
+        }
+
+        footer p {
+            margin: 0;
+        }
+         #cart {
+            padding: 60px;
+            margin: 100px;
+          
+            text-align: center;
+         }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">SportsHub</div>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li style=" padding: 10px;
+                border: 15px;
+                color:#b8860b;
+                background-color:#d4af37;
+                border-radius: 5%;"><a href="cart.html">Cart</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="cart">
+        <h2>Your Cart</h2>
+
+        <div id="cart-items">
+            <!-- Cart items will be dynamically added here -->
+        </div>
+
+        <div>
+            <p id="total-amount">Total: $0.00</p>
+            <p id="discount">Discount (15%): -$0.00</p>
+            <p id="final-amount">Final Amount: $0.00</p>
+        </div>
+
+        <button class="btn checkout" onclick="clearCart()">Clear Cart</button>
+    </section>
+    <script src="cart.js"></script>
+
+    <footer style="position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;">
+        <p>&copy; 2024 SportsHub. All rights reserved.</p>
+    </footer>
+</body>
+</html>
